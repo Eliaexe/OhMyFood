@@ -18,16 +18,23 @@ $container-padding: 4rem 2rem 5rem 2rem;
     font-weight: 700;
 }
 
+h1{
+    font-family: 'Shrikhand', cursive;
+    font-weight: 300;
+}
+
 h3{
     font-size: 1.8rem;
     font-weight: 500;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
 header{
 
     h1{
-    font-family: 'Shrikhand', cursive;
-    font-weight: 300;
     font-size: 3.3rem;
     text-align: center;
     padding: 1rem;
@@ -128,16 +135,14 @@ header{
     flex-direction: column;
 
     &__card{
-
+        background-color: white;
+        border-radius: 2rem;
+        margin-bottom: 2rem; 
         img{
             height: 20rem;
             width: 100%;
-        }
-
-        .text{
-            display: flex;
-            flex-direction: column;
-            width: 80%;
+            border-radius: 2rem 2rem 0 0;
+            object-fit: cover;
         }
 
         p{
@@ -152,23 +157,30 @@ header{
             border-radius: 3px;
             color: darken($color-tertiary, 40%);
         }
-
+        
         h3{
             font-size: 2rem;
             font-weight: 700;
             margin: -2rem 0 .8rem 1rem;
+            width: 60%;
         }
 
         h4{
+            display: inline-block;
             font-size: 1.8rem;
             font-weight: 300;
-            margin: 0 1rem;
+            margin: 0 0 2rem 1rem;
         }
 
         i{
-            display: flex;
+            float: right;
+            width: 20%;
             font-size: 3rem;
             font-weight: 300;
+            margin-top: 2.5rem;
+            margin-right: -1.5rem;
         }
     }
+
+    
 }
