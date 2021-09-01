@@ -33,7 +33,7 @@ header h1 {
 }
 
 .position {
-  background-color: #f5f5f5;
+  background-color: #e8e8e8;
   padding: 2rem;
   text-align: center;
 }
@@ -68,7 +68,7 @@ header h1 {
 .explanation h3 {
   color: white;
   display: inline-block;
-  padding: 2rem;
+  padding: 1.8rem 2.2rem;
   border-radius: 3rem;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -80,7 +80,7 @@ header h1 {
 
 .operation__card {
   padding: 2rem;
-  margin: 2rem 0;
+  margin: 2rem .8rem;
   background-color: #f5f5f5;
   border-radius: 2rem;
 }
@@ -127,6 +127,10 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.resturants h2 {
+  margin-bottom: 2rem;
 }
 
 .resturants__card {
@@ -176,4 +180,32 @@ header h1 {
   font-weight: 300;
   margin-top: 2.5rem;
   margin-right: -1.5rem;
+}
+
+footer {
+  padding: 2rem 0 4rem 2rem;
+  background-color: #333333;
+  color: white;
+}
+
+footer h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+footer .composed p {
+  display: inline-block;
+}
+
+footer .composed i {
+  font-size: 1.3rem;
+  width: 2.5rem;
+  text-align: center;
+  margin-left: -.5rem;
+}
+
+footer p {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }

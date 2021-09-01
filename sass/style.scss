@@ -42,7 +42,7 @@ header{
 }
 
 .position{
-    background-color: $color-lightgrey;
+    background-color: darken($color-lightgrey, 5%);
     padding: 2rem;
     text-align: center;
 
@@ -77,7 +77,7 @@ header{
         color: white;
 
         display: inline-block;
-        padding: 2rem;
+        padding: 1.8rem 2.2rem;
         border-radius: 3rem;
 
         background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
@@ -89,7 +89,7 @@ header{
     
     &__card{
         padding: 2rem;
-        margin: 2rem 0;
+        margin: 2rem .8rem;
         background-color: $color-lightgrey;
         border-radius: 2rem;
         
@@ -133,6 +133,10 @@ header{
     padding: $container-padding;
     display: flex;
     flex-direction: column;
+
+    h2{
+        margin-bottom: 2rem;
+    }
 
     &__card{
         background-color: white;
@@ -181,6 +185,34 @@ header{
             margin-right: -1.5rem;
         }
     }
+}
 
-    
+footer{
+
+    padding: 2rem 0 4rem 2rem;
+    background-color: lighten(black, 20%);
+    color: white;
+    h1{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .composed{
+        p{
+            display: inline-block;
+        }
+
+        i{
+            font-size: 1.3rem;
+            width: 2.5rem;
+            text-align: center;
+            margin-left: -.5rem;
+        }
+    }
+
+    p{
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
 }
