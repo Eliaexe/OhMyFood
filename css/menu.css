@@ -1,0 +1,76 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  font-weight: 300;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 6rem;
+}
+
+header h1 {
+  font-size: 3.3rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+header img {
+  width: 100%;
+}
+
+header i {
+  font-size: 2rem;
+  width: 5rem;
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
+main {
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  bottom: 5rem;
+  background-color: #f0f0f0;
+  padding: 0 2rem 5rem 2rem;
+}
+
+main h2 {
+  font-family: 'Shrikhand', cursive;
+  font-weight: 400;
+  padding: 3rem 0 4rem 0;
+  font-size: 2.5rem;
+  display: inline-block;
+}
+
+main i {
+  float: right;
+  font-size: 2.5rem;
+  height: 6rem;
+  width: 6rem;
+  padding: 4rem;
+}
+
+main .dish .dish__card {
+  background-color: white;
+}
+
+main .dish h3 {
+  font-size: 1.8rem;
+}
+
+main .dish p {
+  font-size: 1.5rem;
+}
