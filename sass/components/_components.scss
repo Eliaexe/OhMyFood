@@ -1,10 +1,16 @@
 
 /* resturant name */
 
+.presentation{
+    padding: 3rem 1rem 4rem 1rem; 
+    display: flex;
+    justify-content: space-around;
+
+}
+
 .resturant__name{
     font-family: 'Shrikhand', cursive;
     font-weight: 400;
-    padding: 3rem 0 4rem 0; 
     margin-left: $margin-left-05;
     font-size: 2.8rem;
     display: inline-block;
@@ -20,19 +26,22 @@
     margin-bottom: 1.5rem;
     display: flex;
     box-shadow: $shadow;
-    animation: card_app $anim-dur ease-in-out;
-    @for $i from 1 through 3 {
+    animation: card_app $anim-dur  ease-out backwards;
+
+    @for $i from 1 through 4 {
         &--#{$i} {
             animation-delay: $anim-delay * $i;
         }
     }
+
+
+
     
-
-
     @keyframes card_app {
         0%{
             transform: translateY(2rem);
             opacity: 0;
+            animation-delay: 300sm;
             }
         
 
@@ -69,16 +78,24 @@
     }
 
     .price{
-        float: right;
+        float: left;
         font-size: 1.7rem;
         font-weight: bold;
     }
 
     i{
-        display: none; 
-        transition-duration: 0.5s;
-        transition-property: transform;
+        visibility: hidden;
+        transition: transform .7s ease-in-out;
+    }
+
+    &:hover i{
+        visibility: visible;
+        display: block;
+        color: white;
+        font-size: 2.5rem;
         transform: rotate(360deg);
+        transition: transform 400ms ease-in-out;
+
     }
 
     .animation{
@@ -98,14 +115,9 @@
         transform: scaleX(1);
     }
 
-    &:hover i{
-        display: block;
-        color: white;
-        font-size: 2.5rem;
-    }
-    
-    &:hover .card__text{
-        width: 80%;
+
+    .rotate{
+        rotate: 2turn;
     }
 }
 
@@ -178,6 +190,14 @@
     padding: $container-padding;
     display: flex;
     flex-direction: column;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    i{
+        font-weight: 100;
+    }
 
     h2{
         margin-bottom: 2rem;

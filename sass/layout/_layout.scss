@@ -4,11 +4,10 @@
     text-decoration: none;
     margin: 0 auto;
     text-align: center;
-    width: 60%;
     display: block;
+    width: 70%;
     padding: 1.5rem;
-    margin-top: 7rem;
-    margin-bottom: 3rem;
+
     border-radius: 3rem;
     box-shadow: 0 3px 3px #888888;
     background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
@@ -17,12 +16,17 @@
     transition: opacity 300ms ease-in-out;
     transition: transform  300ms;
 
+    &__menu{
+        margin-bottom: 12rem;
+    }
+
     &:hover{
         transform: scale(1.2);
         opacity: 0.6;
         box-shadow: 0 5px 3px #888888;
-
     }
+
+
 }
 
 .heart_animated{
