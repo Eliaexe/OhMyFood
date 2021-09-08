@@ -61,7 +61,7 @@ h1 {
   font-size: 3rem;
   height: 4rem;
   width: 4rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .heart_animated:hover {
@@ -172,6 +172,11 @@ footer p {
   margin-bottom: 1rem;
 }
 
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
 .title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -270,15 +275,12 @@ h3 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
-  margin: 1.5rem;
+  margin: 1.5rem 0 1.5rem 1.5rem;
 }
 
 .dish__card h3 {
-  width: 100%;
+  width: 95%;
   font-size: 1.8rem;
   margin-bottom: .5rem;
   text-overflow: ellipsis;
@@ -288,6 +290,7 @@ h3 {
 
 .dish__card p {
   width: 85%;
+  margin-right: .5rem;
   font-size: 1.4rem;
   font-weight: 300;
   text-overflow: ellipsis;
