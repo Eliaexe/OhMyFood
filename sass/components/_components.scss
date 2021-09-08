@@ -1,0 +1,230 @@
+
+/* resturant name */
+
+.resturant__name{
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    padding: 3rem 0 4rem 0; 
+    margin-left: $margin-left-05;
+    font-size: 2.8rem;
+    display: inline-block;
+}
+
+
+
+/* menù cards */
+
+.dish__card{
+    background-color: white;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    box-shadow: $shadow;
+    animation: card_app $anim-dur ease-in-out;
+    @for $i from 1 through 3 {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
+    
+
+
+    @keyframes card_app {
+        0%{
+            transform: translateY(2rem);
+            opacity: 0;
+            }
+        
+
+        100%{
+            opacity: 1;
+            transform: translateY(0rem);
+        }
+    }
+
+    .card__text{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin: 1.5rem;
+    }
+
+    h3{
+        width: 100%;
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+        text-overflow: ellipsis;
+        overflow: clip; 
+        white-space: nowrap;
+    }
+
+    p{
+        width: 85%; 
+        
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        white-space: nowrap;
+    }
+
+    .price{
+        float: right;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    i{
+        display: none; 
+        transition-duration: 0.5s;
+        transition-property: transform;
+        transform: rotate(360deg);
+    }
+
+    .animation{
+        transform-origin: 100% 0%;
+        transform: scaleX(0);
+        transition: transform 500ms; 
+        width: 0%;
+    }
+
+    &:hover .animation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        border-radius: 0 1.5rem 1.5rem 0;
+        background-color: $color-tertiary;
+        transform: scaleX(1);
+    }
+
+    &:hover i{
+        display: block;
+        color: white;
+        font-size: 2.5rem;
+    }
+    
+    &:hover .card__text{
+        width: 80%;
+    }
+}
+
+/* home */
+
+.explanation{
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    padding: 5rem 0 7rem 0;
+
+    h2{
+        padding: 0rem 6rem 1.5rem 6rem;
+    }
+
+    p{
+        font-size: 1.8rem;
+        font-weight: 300;
+        padding: 0 4rem 3rem 4rem;
+    }
+}
+
+.operation{
+    padding: $container-padding;
+    
+    &__card{
+        padding: 2rem;
+        margin: 2rem .8rem;
+        background-color: $color-lightgrey;
+        border-radius: 2rem;
+        animation: card_app 500ms ease-in-out;
+        
+
+        &:hover{
+            transition: transform 450ms, background-color 300ms 150ms;
+            background-color: lighten($color-primary, 35%);
+
+            i{
+                color: $color-primary;
+            }
+        }
+
+        p{
+            display: inline-block;
+            background-color: $color-primary;
+            color: white;
+            font-size: 1.5rem;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            line-height: 3rem;
+            text-align: center;
+            position: relative;
+            left: -3.3rem;
+        }
+
+        i{
+            font-size: 2rem;
+            margin: 0 1.5rem 0 -1.5rem;
+            color: darken($color-lightgrey, 50%);
+        }
+
+        h3{
+            display: inline-block;
+        }
+    }
+}
+
+.resturants{
+    background-color: $color-lightgrey;
+    padding: $container-padding;
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        margin-bottom: 2rem;
+    }
+
+    &__card{
+        background-color: white;
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+        box-sizing: $shadow; 
+        img{
+            height: 20rem;
+            width: 100%;
+            border-radius: 2rem 2rem 0 0;
+            object-fit: cover;
+        }
+
+        p{
+            display: inline-block;
+            position: relative;
+            top: -19rem;
+            left: 72%;
+            font-size: 1.5rem;
+            
+            background-color: $color-tertiary;
+            padding: .8rem 1.2rem;
+            border-radius: 3px;
+            color: darken($color-tertiary, 40%);
+        }
+        
+        h3{
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: -2.5rem 0 .8rem 1rem;
+            width: 60%;
+        }
+
+        h4{
+            display: inline-block;
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin: 0 0 2rem 1rem;
+        }
+
+        
+    }
+}
+

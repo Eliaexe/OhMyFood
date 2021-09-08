@@ -1,0 +1,26 @@
+.title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.position{
+    background-color: darken($color-lightgrey, 5%);
+    padding: 2rem;
+    text-align: center;
+
+    i{
+        font-size: 2rem;
+        margin-right: 1.5rem;
+    }
+
+    p{
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+}
