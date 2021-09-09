@@ -1,0 +1,91 @@
+.title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.page{
+    opacity: 0;
+    animation: start 300ms 1s ease-in forwards;
+    @keyframes start {
+        0%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
+    }
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.position{
+    background-color: darken($color-lightgrey, 5%);
+    padding: 2rem;
+    text-align: center;
+
+    i{
+        font-size: 2rem;
+        margin-right: 1.5rem;
+    }
+
+    p{
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+}
+
+.initial__animation{
+    
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 10rem;
+    height: 10rem;
+    background-color: lighten($color-secondary, 10%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: init 1000ms ease-out ;
+    @keyframes init {
+        0%{
+            opacity: 0;
+            transform: scale(.9);
+        }
+        
+        30%{
+            opacity: 1;
+        }
+    
+        50%{
+            transform: scale(2);
+        }
+        
+        70%{
+            animation-delay: 100ms;
+            opacity: 1;
+        }
+
+        100%{
+            opacity: 0;
+            transform: scale(8);
+        }
+    }
+
+    &--icon{
+        color: $color-primary;
+        text-align: center;
+    }
+
+}
+
+

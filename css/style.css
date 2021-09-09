@@ -1,0 +1,650 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  font-weight: 300;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.btn {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 70%;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  -webkit-box-shadow: 0 3px 3px #888888;
+          box-shadow: 0 3px 3px #888888;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  -webkit-transition: -webkit-transform  300ms;
+  transition: -webkit-transform  300ms;
+  transition: transform  300ms;
+  transition: transform  300ms, -webkit-transform  300ms;
+}
+
+.btn__menu {
+  margin-bottom: 12rem;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0.6;
+  -webkit-box-shadow: 0 5px 3px #888888;
+          box-shadow: 0 5px 3px #888888;
+}
+
+.heart_animated {
+  float: right;
+  margin-right: 10%;
+  font-size: 3rem;
+  height: 4rem;
+  width: 4rem;
+  font-weight: 400;
+}
+
+.heart_animated:hover {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -webkit-linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  -webkit-animation: like 400ms ease-in-out;
+          animation: like 400ms ease-in-out;
+}
+
+@-webkit-keyframes like {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    font-weight: 500;
+    opacity: .4;
+  }
+  40% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes like {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    font-weight: 500;
+    opacity: .4;
+  }
+  40% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+header {
+  background-color: white;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 6.5rem;
+}
+
+header h1 {
+  font-size: 3.3rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+header img {
+  width: 100%;
+  height: 31rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header i {
+  color: #4d4d4d;
+  font-size: 2rem;
+  width: 5rem;
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
+footer {
+  padding: 2rem 0 4rem 2rem;
+  background-color: #333333;
+  color: white;
+}
+
+footer h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+footer .composed p {
+  display: inline-block;
+}
+
+footer .composed i {
+  font-size: 1.3rem;
+  width: 2.5rem;
+  text-align: center;
+  margin-left: -.5rem;
+}
+
+footer p {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.page {
+  opacity: 0;
+  -webkit-animation: start 300ms 1s ease-in forwards;
+          animation: start 300ms 1s ease-in forwards;
+}
+
+@-webkit-keyframes start {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.position {
+  background-color: #e8e8e8;
+  padding: 2rem;
+  text-align: center;
+}
+
+.position i {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+.position p {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.initial__animation {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
+  background-color: #fface8;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-animation: init 1000ms ease-out;
+          animation: init 1000ms ease-out;
+}
+
+@-webkit-keyframes init {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  70% {
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(8);
+            transform: scale(8);
+  }
+}
+
+@keyframes init {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  70% {
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(8);
+            transform: scale(8);
+  }
+}
+
+.initial__animation--icon {
+  color: #9356DC;
+  text-align: center;
+}
+
+/* resturant name */
+.presentation {
+  padding: 3rem 1rem 4rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.resturant__name {
+  font-family: 'Shrikhand', cursive;
+  font-weight: 400;
+  margin-left: .5rem;
+  font-size: 2.8rem;
+}
+
+/* menù cards */
+.dish__card {
+  background-color: white;
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
+          box-shadow: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
+  -webkit-animation: card_app 800ms ease-out backwards;
+          animation: card_app 800ms ease-out backwards;
+}
+
+.dish__card--1 {
+  -webkit-animation-delay: 266.66667ms;
+          animation-delay: 266.66667ms;
+}
+
+.dish__card--2 {
+  -webkit-animation-delay: 533.33333ms;
+          animation-delay: 533.33333ms;
+}
+
+.dish__card--3 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.dish__card--4 {
+  -webkit-animation-delay: 1066.66667ms;
+          animation-delay: 1066.66667ms;
+}
+
+@-webkit-keyframes card_app {
+  0% {
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@keyframes card_app {
+  0% {
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+.dish__card .card__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
+.dish__card h3 {
+  width: 95%;
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dish__card p {
+  width: 85%;
+  margin-right: .5rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dish__card .price {
+  float: left;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.dish__card i {
+  visibility: hidden;
+  -webkit-transition: -webkit-transform .7s ease-in-out;
+  transition: -webkit-transform .7s ease-in-out;
+  transition: transform .7s ease-in-out;
+  transition: transform .7s ease-in-out, -webkit-transform .7s ease-in-out;
+}
+
+.dish__card:hover i {
+  visibility: visible;
+  display: block;
+  color: white;
+  font-size: 2.5rem;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+}
+
+.dish__card .animation {
+  -webkit-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  width: 0%;
+}
+
+.dish__card:hover .animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  border-radius: 0 1.5rem 1.5rem 0;
+  background-color: #99E2D0;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+/* home */
+.explanation {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 5rem 0 7rem 0;
+}
+
+.explanation h2 {
+  padding: 0rem 6rem 1.5rem 6rem;
+}
+
+.explanation p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 0 4rem 3rem 4rem;
+}
+
+.operation {
+  padding: 4rem 2rem 5rem 2rem;
+  background-color: white;
+}
+
+.operation__card {
+  padding: 2rem;
+  margin: 2rem .8rem;
+  background-color: #f5f5f5;
+  border-radius: 2rem;
+  -webkit-animation: card_app 500ms 1000ms ease-in-out backwards;
+          animation: card_app 500ms 1000ms ease-in-out backwards;
+}
+
+.operation__card:hover {
+  -webkit-transition: background-color 300ms 150ms, -webkit-transform 450ms;
+  transition: background-color 300ms 150ms, -webkit-transform 450ms;
+  transition: transform 450ms, background-color 300ms 150ms;
+  transition: transform 450ms, background-color 300ms 150ms, -webkit-transform 450ms;
+  background-color: #f2eafb;
+}
+
+.operation__card:hover i {
+  color: #9356DC;
+}
+
+.operation__card p {
+  display: inline-block;
+  background-color: #9356DC;
+  color: white;
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  line-height: 3rem;
+  text-align: center;
+  position: relative;
+  left: -3.3rem;
+}
+
+.operation__card i {
+  font-size: 2rem;
+  margin: 0 1.5rem 0 -1.5rem;
+  color: #767676;
+}
+
+.operation__card h3 {
+  display: inline-block;
+}
+
+.resturants {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem 5rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.resturants a {
+  text-decoration: none;
+  color: black;
+}
+
+.resturants i {
+  font-weight: 100;
+}
+
+.resturants h2 {
+  margin-bottom: 2rem;
+}
+
+.resturants__card {
+  background-color: white;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
+          box-shadow: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
+}
+
+.resturants__card img {
+  height: 20rem;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.resturants__card p {
+  display: inline-block;
+  position: relative;
+  top: -19rem;
+  left: 72%;
+  font-size: 1.5rem;
+  background-color: #99E2D0;
+  padding: .8rem 1.2rem;
+  border-radius: 3px;
+  color: #278870;
+}
+
+.resturants__card h3 {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: -2.5rem 0 .8rem 1rem;
+  width: 70%;
+}
+
+.resturants__card h4 {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 0 0 2rem 1rem;
+}
+
+@media (min-width: 500px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #e8f9f5;
+  }
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    width: 80%;
+  }
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media (min-width: 760px) {
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    width: 70%;
+  }
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
