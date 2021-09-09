@@ -67,16 +67,18 @@
 }
 
 header{
+    background-color: white;
     nav{
         display: flex;
         justify-content: space-between;
         height: 6.5rem;
     }
+
     h1{
         font-size: 3.3rem;
         text-align: center;
-        padding-top: 1rem ;
-        }
+        padding-top: 1rem;
+    }
 
     img{
         width: 100%;
@@ -98,7 +100,7 @@ footer{
     padding: 2rem 0 4rem 2rem;
     background-color: lighten(black, 20%);
     color: white;
-    h1{
+    h2{
         font-size: 2rem;
         margin-bottom: 2rem;
     }

@@ -11,9 +11,8 @@
 .resturant__name{
     font-family: 'Shrikhand', cursive;
     font-weight: 400;
-    margin-left: $margin-left-05;
+    margin-left: .5rem;
     font-size: 2.8rem;
-    display: inline-block;
 }
 
 
@@ -26,7 +25,7 @@
     margin-bottom: 1.5rem;
     display: flex;
     box-shadow: $shadow;
-    animation: card_app $anim-dur  ease-out backwards;
+    animation: card_app $anim-dur ease-out backwards;
 
     @for $i from 1 through 4 {
         &--#{$i} {
@@ -34,14 +33,10 @@
         }
     }
 
-
-
-    
     @keyframes card_app {
         0%{
             transform: translateY(2rem);
             opacity: 0;
-            animation-delay: 300sm;
             }
         
 
@@ -63,7 +58,6 @@
         font-size: 1.8rem;
         margin-bottom: .5rem;
         text-overflow: ellipsis;
-        overflow: clip; 
         white-space: nowrap;
     }
 
@@ -114,11 +108,6 @@
         background-color: $color-tertiary;
         transform: scaleX(1);
     }
-
-
-    .rotate{
-        rotate: 2turn;
-    }
 }
 
 /* home */
@@ -141,13 +130,14 @@
 
 .operation{
     padding: $container-padding;
+    background-color: white;
     
     &__card{
         padding: 2rem;
         margin: 2rem .8rem;
         background-color: $color-lightgrey;
         border-radius: 2rem;
-        animation: card_app 500ms ease-in-out;
+        animation: card_app 500ms 1000ms ease-in-out backwards;
         
 
         &:hover{
@@ -207,7 +197,7 @@
         background-color: white;
         border-radius: 2rem;
         margin-bottom: 2rem;
-        box-sizing: $shadow; 
+        box-shadow: $shadow; 
         img{
             height: 20rem;
             width: 100%;
@@ -233,7 +223,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin: -2.5rem 0 .8rem 1rem;
-            width: 60%;
+            width: 70%;
         }
 
         h4{

@@ -17,10 +17,6 @@ h1 {
   visibility: hidden;
 }
 
-.d-block {
-  display: block;
-}
-
 .btn {
   font-size: 2rem;
   color: white;
@@ -115,6 +111,10 @@ h1 {
   }
 }
 
+header {
+  background-color: white;
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,7 +152,7 @@ footer {
   color: white;
 }
 
-footer h1 {
+footer h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -184,6 +184,30 @@ footer a {
   font-weight: 700;
 }
 
+.page {
+  opacity: 0;
+  -webkit-animation: start 300ms 1s ease-in forwards;
+          animation: start 300ms 1s ease-in forwards;
+}
+
+@-webkit-keyframes start {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 h3 {
   font-size: 1.8rem;
   font-weight: 500;
@@ -206,6 +230,86 @@ h3 {
   font-weight: 500;
 }
 
+.initial__animation {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
+  background-color: #fface8;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-animation: init 1000ms ease-out;
+          animation: init 1000ms ease-out;
+}
+
+@-webkit-keyframes init {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  70% {
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(8);
+            transform: scale(8);
+  }
+}
+
+@keyframes init {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  70% {
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(8);
+            transform: scale(8);
+  }
+}
+
+.initial__animation--icon {
+  color: #9356DC;
+  text-align: center;
+}
+
 /* resturant name */
 .presentation {
   padding: 3rem 1rem 4rem 1rem;
@@ -219,9 +323,8 @@ h3 {
 .resturant__name {
   font-family: 'Shrikhand', cursive;
   font-weight: 400;
-  margin-left: margin-left=0.5 rem;
+  margin-left: .5rem;
   font-size: 2.8rem;
-  display: inline-block;
 }
 
 /* menù cards */
@@ -263,8 +366,6 @@ h3 {
     -webkit-transform: translateY(2rem);
             transform: translateY(2rem);
     opacity: 0;
-    -webkit-animation-delay: 300sm;
-            animation-delay: 300sm;
   }
   100% {
     opacity: 1;
@@ -278,8 +379,6 @@ h3 {
     -webkit-transform: translateY(2rem);
             transform: translateY(2rem);
     opacity: 0;
-    -webkit-animation-delay: 300sm;
-            animation-delay: 300sm;
   }
   100% {
     opacity: 1;
@@ -303,7 +402,6 @@ h3 {
   font-size: 1.8rem;
   margin-bottom: .5rem;
   text-overflow: ellipsis;
-  overflow: clip;
   white-space: nowrap;
 }
 
@@ -373,10 +471,6 @@ h3 {
           transform: scaleX(1);
 }
 
-.dish__card .rotate {
-  rotate: 2turn;
-}
-
 /* home */
 .explanation {
   background-color: whitesmoke;
@@ -396,6 +490,7 @@ h3 {
 
 .operation {
   padding: 4rem 2rem 5rem 2rem;
+  background-color: white;
 }
 
 .operation__card {
@@ -403,8 +498,8 @@ h3 {
   margin: 2rem .8rem;
   background-color: #f5f5f5;
   border-radius: 2rem;
-  -webkit-animation: card_app 500ms ease-in-out;
-          animation: card_app 500ms ease-in-out;
+  -webkit-animation: card_app 500ms 1000ms ease-in-out backwards;
+          animation: card_app 500ms 1000ms ease-in-out backwards;
 }
 
 .operation__card:hover {
@@ -472,8 +567,8 @@ h3 {
   background-color: white;
   border-radius: 2rem;
   margin-bottom: 2rem;
-  -webkit-box-sizing: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
-          box-sizing: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
+          box-shadow: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
 }
 
 .resturants__card img {
@@ -501,7 +596,7 @@ h3 {
   font-size: 2rem;
   font-weight: 700;
   margin: -2.5rem 0 .8rem 1rem;
-  width: 60%;
+  width: 70%;
 }
 
 .resturants__card h4 {
@@ -509,4 +604,47 @@ h3 {
   font-size: 1.8rem;
   font-weight: 300;
   margin: 0 0 2rem 1rem;
+}
+
+@media (min-width: 500px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #e8f9f5;
+  }
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    width: 80%;
+  }
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media (min-width: 760px) {
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    width: 70%;
+  }
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
 }

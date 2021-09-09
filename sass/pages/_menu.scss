@@ -25,9 +25,17 @@ header{
     }
 }
 
+main{
+    background-color: white;
+    position: relative;
+    top: -2.5rem;
+
+    border-radius: 3rem 3rem 0 0;
+    padding-bottom: 5rem;
+}
+
 .cuore{
     margin: auto 0;
-    padding: auto;
     font-size: 2.5rem;
     line-height: 4rem;
     height: 4rem;
@@ -50,5 +58,9 @@ header{
         display: inline-block;
         width: 13%;
     }
+}
+
+footer{
+    margin-top: -3rem;
 }
 

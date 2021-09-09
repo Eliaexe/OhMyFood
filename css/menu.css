@@ -17,10 +17,6 @@ h1 {
   visibility: hidden;
 }
 
-.d-block {
-  display: block;
-}
-
 .btn {
   font-size: 2rem;
   color: white;
@@ -115,6 +111,10 @@ h1 {
   }
 }
 
+header {
+  background-color: white;
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,7 +152,7 @@ footer {
   color: white;
 }
 
-footer h1 {
+footer h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -210,9 +210,16 @@ header i {
   padding-top: 2.5rem;
 }
 
+main {
+  background-color: white;
+  position: relative;
+  top: -2.5rem;
+  border-radius: 3rem 3rem 0 0;
+  padding-bottom: 5rem;
+}
+
 .cuore {
   margin: auto 0;
-  padding: auto;
   font-size: 2.5rem;
   line-height: 4rem;
   height: 4rem;
@@ -236,6 +243,10 @@ header i {
   width: 13%;
 }
 
+footer {
+  margin-top: -3rem;
+}
+
 /* resturant name */
 .presentation {
   padding: 3rem 1rem 4rem 1rem;
@@ -249,9 +260,8 @@ header i {
 .resturant__name {
   font-family: 'Shrikhand', cursive;
   font-weight: 400;
-  margin-left: margin-left=0.5 rem;
+  margin-left: .5rem;
   font-size: 2.8rem;
-  display: inline-block;
 }
 
 /* menù cards */
@@ -293,8 +303,6 @@ header i {
     -webkit-transform: translateY(2rem);
             transform: translateY(2rem);
     opacity: 0;
-    -webkit-animation-delay: 300sm;
-            animation-delay: 300sm;
   }
   100% {
     opacity: 1;
@@ -308,8 +316,6 @@ header i {
     -webkit-transform: translateY(2rem);
             transform: translateY(2rem);
     opacity: 0;
-    -webkit-animation-delay: 300sm;
-            animation-delay: 300sm;
   }
   100% {
     opacity: 1;
@@ -333,7 +339,6 @@ header i {
   font-size: 1.8rem;
   margin-bottom: .5rem;
   text-overflow: ellipsis;
-  overflow: clip;
   white-space: nowrap;
 }
 
@@ -403,10 +408,6 @@ header i {
           transform: scaleX(1);
 }
 
-.dish__card .rotate {
-  rotate: 2turn;
-}
-
 /* home */
 .explanation {
   background-color: whitesmoke;
@@ -426,6 +427,7 @@ header i {
 
 .operation {
   padding: 4rem 2rem 5rem 2rem;
+  background-color: white;
 }
 
 .operation__card {
@@ -433,8 +435,8 @@ header i {
   margin: 2rem .8rem;
   background-color: #f5f5f5;
   border-radius: 2rem;
-  -webkit-animation: card_app 500ms ease-in-out;
-          animation: card_app 500ms ease-in-out;
+  -webkit-animation: card_app 500ms 1000ms ease-in-out backwards;
+          animation: card_app 500ms 1000ms ease-in-out backwards;
 }
 
 .operation__card:hover {
@@ -502,8 +504,8 @@ header i {
   background-color: white;
   border-radius: 2rem;
   margin-bottom: 2rem;
-  -webkit-box-sizing: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
-          box-sizing: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
+          box-shadow: 2px 10px 10px -5px rgba(0, 0, 0, 0.18);
 }
 
 .resturants__card img {
@@ -531,7 +533,7 @@ header i {
   font-size: 2rem;
   font-weight: 700;
   margin: -2.5rem 0 .8rem 1rem;
-  width: 60%;
+  width: 70%;
 }
 
 .resturants__card h4 {
@@ -539,4 +541,47 @@ header i {
   font-size: 1.8rem;
   font-weight: 300;
   margin: 0 0 2rem 1rem;
+}
+
+@media (min-width: 500px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #e8f9f5;
+  }
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    width: 80%;
+  }
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media (min-width: 760px) {
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    width: 70%;
+  }
+  .position, .explanation, .operation, .resturants,
+  .presentation, .dish, .btn__menu {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
 }
