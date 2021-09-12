@@ -57,8 +57,8 @@ h1 {
   float: right;
   margin-right: 10%;
   font-size: 3rem;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   font-weight: 400;
 }
 
@@ -153,8 +153,10 @@ footer {
 }
 
 footer h2 {
-  font-size: 2rem;
   margin-bottom: 2rem;
+  font-size: 2.3rem;
+  font-family: 'Shrikhand', cursive;
+  font-weight: 300;
 }
 
 footer .composed p {
@@ -221,9 +223,9 @@ main {
 .cuore {
   margin: auto 0;
   font-size: 2.5rem;
-  line-height: 4rem;
-  height: 4rem;
-  width: 4rem;
+  line-height: 3rem;
+  height: 3rem;
+  width: 3rem;
   text-align: center;
 }
 
@@ -340,6 +342,7 @@ footer {
   margin-bottom: .5rem;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .dish__card p {
@@ -565,6 +568,12 @@ footer {
     padding-left: 15%;
     padding-right: 15%;
   }
+  .btn {
+    width: 72%;
+  }
+  .resturants__card h3, .resturants__card h4 {
+    margin-left: 2rem;
+  }
 }
 
 @media (min-width: 760px) {
@@ -573,15 +582,27 @@ footer {
     padding-left: 20%;
     padding-right: 20%;
   }
+  .resturants__card p {
+    left: 75%;
+  }
 }
 
 @media (min-width: 1200px) {
   body {
-    width: 70%;
+    width: 76%;
   }
   .position, .explanation, .operation, .resturants,
   .presentation, .dish, .btn__menu {
     padding-left: 25%;
     padding-right: 25%;
+  }
+  .resturants__card p {
+    left: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .resturants__card p {
+    left: 80%;
   }
 }

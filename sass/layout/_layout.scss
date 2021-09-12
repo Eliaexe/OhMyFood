@@ -33,8 +33,8 @@
     float: right;
     margin-right: 10%;
     font-size: 3rem;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     font-weight: 400;
 
 
@@ -101,8 +101,10 @@ footer{
     background-color: lighten(black, 20%);
     color: white;
     h2{
-        font-size: 2rem;
         margin-bottom: 2rem;
+        font-size: 2.3rem;
+        font-family: 'Shrikhand', cursive;
+        font-weight: 300;
     }
 
     .composed{
