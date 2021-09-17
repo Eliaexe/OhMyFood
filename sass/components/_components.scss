@@ -86,14 +86,14 @@
 
     &:hover i{
         transform: rotate(720deg);
-        transition: transform 400ms ease-in-out;
+        transition: transform .7s ease-in-out;
     }
 
     .animation{
         transform: scaleX(0);
         width: 0%;
 
-        animation: check-out 600ms ease-out forwards;
+        animation: check-out 600ms ease-in;
         transform-origin: 100% 100%;
 
         background-color: $color-tertiary;

@@ -370,18 +370,18 @@ footer {
 .dish__card:hover i {
   -webkit-transform: rotate(720deg);
           transform: rotate(720deg);
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  -webkit-transition: -webkit-transform .7s ease-in-out;
+  transition: -webkit-transform .7s ease-in-out;
+  transition: transform .7s ease-in-out;
+  transition: transform .7s ease-in-out, -webkit-transform .7s ease-in-out;
 }
 
 .dish__card .animation {
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   width: 0%;
-  -webkit-animation: check-out 600ms ease-out forwards;
-          animation: check-out 600ms ease-out forwards;
+  -webkit-animation: check-out 600ms ease-in;
+          animation: check-out 600ms ease-in;
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
   background-color: #99E2D0;
