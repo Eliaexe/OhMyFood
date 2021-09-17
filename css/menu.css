@@ -362,20 +362,14 @@ footer {
 }
 
 .dish__card i {
-  visibility: hidden;
-  -webkit-transition: -webkit-transform .7s ease-in-out;
-  transition: -webkit-transform .7s ease-in-out;
-  transition: transform .7s ease-in-out;
-  transition: transform .7s ease-in-out, -webkit-transform .7s ease-in-out;
-}
-
-.dish__card:hover i {
-  visibility: visible;
   display: block;
   color: white;
   font-size: 2.5rem;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+}
+
+.dish__card:hover i {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
   -webkit-transition: -webkit-transform 400ms ease-in-out;
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
@@ -383,18 +377,15 @@ footer {
 }
 
 .dish__card .animation {
-  -webkit-transform-origin: 100% 0%;
-          transform-origin: 100% 0%;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
   width: 0%;
-}
-
-.dish__card:hover .animation {
+  -webkit-animation: check-out 600ms ease-out forwards;
+          animation: check-out 600ms ease-out forwards;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  background-color: #99E2D0;
+  border-radius: 0 1.5rem 1.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,11 +395,69 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
-  border-radius: 0 1.5rem 1.5rem 0;
   background-color: #99E2D0;
+}
+
+.dish__card:hover .animation {
+  width: 20%;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+  -webkit-animation: check-in 600ms ease-out forwards;
+          animation: check-in 600ms ease-out forwards;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+@-webkit-keyframes check-in {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 20%;
+  }
+}
+
+@keyframes check-in {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 20%;
+  }
+}
+
+@-webkit-keyframes check-out {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 20%;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0%;
+  }
+}
+
+@keyframes check-out {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 20%;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0%;
+  }
 }
 
 /* home */
