@@ -59,6 +59,7 @@
         margin-bottom: .5rem;
         text-overflow: ellipsis;
         white-space: nowrap;
+        overflow: hidden; 
     }
 
     p{
@@ -78,36 +79,67 @@
     }
 
     i{
-        visibility: hidden;
-        transition: transform .7s ease-in-out;
-    }
-
-    &:hover i{
-        visibility: visible;
         display: block;
         color: white;
         font-size: 2.5rem;
-        transform: rotate(360deg);
-        transition: transform 400ms ease-in-out;
+    }
 
+    &:hover i{
+        transform: rotate(720deg);
+        transition: transform .7s ease-in-out;
     }
 
     .animation{
-        transform-origin: 100% 0%;
         transform: scaleX(0);
-        transition: transform 500ms; 
         width: 0%;
-    }
 
-    &:hover .animation{
+        animation: check-out 600ms ease-in;
+        transform-origin: 100% 100%;
+
+        background-color: $color-tertiary;
+        border-radius: 0 1.5rem 1.5rem 0;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20%;
-        border-radius: 0 1.5rem 1.5rem 0;
         background-color: $color-tertiary;
-        transform: scaleX(1);
+
     }
+
+    &:hover .animation{
+
+        width: 20%;
+        transform: scaleX(1);
+
+        animation: check-in 600ms ease-out forwards;
+        transform-origin: 100% 100%;
+
+        @keyframes check-in {
+            0%{
+                transform: scaleX(0);
+                width: 0%;
+
+            }
+
+            100%{
+                transform: scaleX(1);
+                width: 20%;
+            }
+        }
+
+        @keyframes check-out {
+            0%{
+                transform: scaleX(1);
+                width: 20%;
+            }
+
+            100%{
+                transform: scaleX(0);
+                width: 0%;
+            }
+        }
+    }
+
 }
 
 /* home */

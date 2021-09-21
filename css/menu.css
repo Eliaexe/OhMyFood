@@ -57,8 +57,8 @@ h1 {
   float: right;
   margin-right: 10%;
   font-size: 3rem;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   font-weight: 400;
 }
 
@@ -69,26 +69,28 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
-  -webkit-animation: like 400ms ease-in-out;
-          animation: like 400ms ease-in-out;
+  -webkit-animation: like 400ms ease-in-out forwards;
+          animation: like 400ms ease-in-out forwards;
 }
 
 @-webkit-keyframes like {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    font-weight: 500;
     opacity: .4;
   }
   40% {
-    -webkit-transform: scale(0.3);
-            transform: scale(0.3);
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    font-weight: 500;
     opacity: 0;
   }
   100% {
-    opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+    opacity: 1;
   }
 }
 
@@ -96,18 +98,20 @@ h1 {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
-    font-weight: 500;
     opacity: .4;
   }
   40% {
-    -webkit-transform: scale(0.3);
-            transform: scale(0.3);
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    font-weight: 500;
     opacity: 0;
   }
   100% {
-    opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+    opacity: 1;
   }
 }
 
@@ -153,8 +157,10 @@ footer {
 }
 
 footer h2 {
-  font-size: 2rem;
   margin-bottom: 2rem;
+  font-size: 2.3rem;
+  font-family: 'Shrikhand', cursive;
+  font-weight: 300;
 }
 
 footer .composed p {
@@ -221,9 +227,9 @@ main {
 .cuore {
   margin: auto 0;
   font-size: 2.5rem;
-  line-height: 4rem;
-  height: 4rem;
-  width: 4rem;
+  line-height: 3rem;
+  height: 3rem;
+  width: 3rem;
   text-align: center;
 }
 
@@ -340,6 +346,7 @@ footer {
   margin-bottom: .5rem;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .dish__card p {
@@ -359,39 +366,30 @@ footer {
 }
 
 .dish__card i {
-  visibility: hidden;
+  display: block;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.dish__card:hover i {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
   -webkit-transition: -webkit-transform .7s ease-in-out;
   transition: -webkit-transform .7s ease-in-out;
   transition: transform .7s ease-in-out;
   transition: transform .7s ease-in-out, -webkit-transform .7s ease-in-out;
 }
 
-.dish__card:hover i {
-  visibility: visible;
-  display: block;
-  color: white;
-  font-size: 2.5rem;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-}
-
 .dish__card .animation {
-  -webkit-transform-origin: 100% 0%;
-          transform-origin: 100% 0%;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
   width: 0%;
-}
-
-.dish__card:hover .animation {
+  -webkit-animation: check-out 600ms ease-in;
+          animation: check-out 600ms ease-in;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  background-color: #99E2D0;
+  border-radius: 0 1.5rem 1.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,11 +399,69 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
-  border-radius: 0 1.5rem 1.5rem 0;
   background-color: #99E2D0;
+}
+
+.dish__card:hover .animation {
+  width: 20%;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+  -webkit-animation: check-in 600ms ease-out forwards;
+          animation: check-in 600ms ease-out forwards;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+@-webkit-keyframes check-in {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 20%;
+  }
+}
+
+@keyframes check-in {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 20%;
+  }
+}
+
+@-webkit-keyframes check-out {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 20%;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0%;
+  }
+}
+
+@keyframes check-out {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    width: 20%;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    width: 0%;
+  }
 }
 
 /* home */
@@ -565,6 +621,12 @@ footer {
     padding-left: 15%;
     padding-right: 15%;
   }
+  .btn {
+    width: 72%;
+  }
+  .resturants__card h3, .resturants__card h4 {
+    margin-left: 2rem;
+  }
 }
 
 @media (min-width: 760px) {
@@ -573,15 +635,27 @@ footer {
     padding-left: 20%;
     padding-right: 20%;
   }
+  .resturants__card p {
+    left: 75%;
+  }
 }
 
 @media (min-width: 1200px) {
   body {
-    width: 70%;
+    width: 76%;
   }
   .position, .explanation, .operation, .resturants,
   .presentation, .dish, .btn__menu {
     padding-left: 25%;
     padding-right: 25%;
+  }
+  .resturants__card p {
+    left: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .resturants__card p {
+    left: 80%;
   }
 }

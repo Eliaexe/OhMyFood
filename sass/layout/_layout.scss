@@ -33,35 +33,39 @@
     float: right;
     margin-right: 10%;
     font-size: 3rem;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     font-weight: 400;
 
 
     &:hover{
+
         background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
         background: -webkit-linear-gradient(to bottom right, $color-secondary, $color-primary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
         font-weight: 600;
-        animation: like 400ms ease-in-out;
+        animation: like 400ms ease-in-out forwards;
     }
 
     @keyframes like {
         0%{
             transform: scale(1);
-            font-weight: 500;
             opacity: .4;
             }
 
         40%{
-            transform: scale(.3);
+            transform: scale(2);
+            font-weight: 500;
             opacity: 0;
         }
 
         100%{
-            opacity: 1;
             transform: scale(1);
+            animation-play-state: paused;  
+            opacity: 1;
+
         }
     }
 }
@@ -101,8 +105,10 @@ footer{
     background-color: lighten(black, 20%);
     color: white;
     h2{
-        font-size: 2rem;
         margin-bottom: 2rem;
+        font-size: 2.3rem;
+        font-family: 'Shrikhand', cursive;
+        font-weight: 300;
     }
 
     .composed{
