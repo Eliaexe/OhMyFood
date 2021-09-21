@@ -666,10 +666,11 @@ h3 {
   body {
     width: 90%;
     margin: 0 auto;
-    background-color: #e8f9f5;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   }
   .position, .explanation, .operation, .resturants,
-  .presentation, .dish, .btn__menu {
+  .presentation, .dish {
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -680,7 +681,7 @@ h3 {
     width: 80%;
   }
   .position, .explanation, .operation, .resturants,
-  .presentation, .dish, .btn__menu {
+  .presentation, .dish {
     padding-left: 15%;
     padding-right: 15%;
   }
@@ -694,7 +695,7 @@ h3 {
 
 @media (min-width: 760px) {
   .position, .explanation, .operation, .resturants,
-  .presentation, .dish, .btn__menu {
+  .presentation, .dish {
     padding-left: 20%;
     padding-right: 20%;
   }
@@ -705,20 +706,132 @@ h3 {
 
 @media (min-width: 1200px) {
   body {
-    width: 76%;
+    width: 100%;
   }
-  .position, .explanation, .operation, .resturants,
-  .presentation, .dish, .btn__menu {
-    padding-left: 25%;
-    padding-right: 25%;
+  .initial__animation {
+    width: 20rem;
+    height: 20rem;
+  }
+  .operation {
+    padding: 2rem 5%;
+    margin: 0;
+  }
+  .operation .title {
+    text-align: center;
+  }
+  .operation_card {
+    width: 60rem;
+  }
+  .operation__card--container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .resturants {
+    padding: 2rem 2%;
+  }
+  .resturants .title {
+    text-align: center;
+  }
+  .resturants__card--container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .resturants__card {
+    width: 25rem;
+  }
+  .resturants__card img {
+    height: 10rem;
   }
   .resturants__card p {
-    left: 75%;
+    top: -9rem;
+    left: 60%;
+  }
+  .btn {
+    width: 40%;
+  }
+  .presentation {
+    padding: 3rem 40rem 3rem 40rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .dish__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 2rem 10%;
+  }
+  .dish {
+    padding: 2rem 1rem;
+    width: 33%;
+    display: inline-block;
+  }
+  footer {
+    padding: 2rem 10%;
+    text-align: center;
+  }
+  footer__composed--container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .composed {
+    display: inline;
+    padding-right: 5rem;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1350px) {
+  body {
+    width: 85%;
+  }
+  .resturants__card {
+    width: 26rem;
+  }
   .resturants__card p {
-    left: 80%;
+    left: 65%;
+  }
+}
+
+@media (min-width: 1500px) {
+  body {
+    width: 85%;
+  }
+  .operation {
+    padding: 2rem 15%;
+  }
+  .resturants__card {
+    width: 30rem;
+  }
+  .resturants__card p {
+    left: 70%;
+  }
+  .presentation {
+    padding: 3rem 50rem 3rem 50rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }

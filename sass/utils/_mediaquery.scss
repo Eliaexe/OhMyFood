@@ -3,11 +3,12 @@
     body{
         width: 90%;
         margin: 0 auto;
-        background-color: lighten($color-tertiary, 20%);
+        background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+
     }
 
     .position, .explanation, .operation, .resturants,
-    .presentation, .dish, .btn__menu{
+    .presentation, .dish{
         padding-left: 10%;
         padding-right: 10%;
     }
@@ -19,7 +20,7 @@
     }
 
     .position, .explanation, .operation, .resturants,
-    .presentation, .dish, .btn__menu{
+    .presentation, .dish{
         padding-left: 15%;
         padding-right: 15%;
     }
@@ -41,7 +42,7 @@
 @media (min-width: 760px) {
 
     .position, .explanation, .operation, .resturants,
-    .presentation, .dish, .btn__menu{
+    .presentation, .dish{
         padding-left: 20%;
         padding-right: 20%;
     }
@@ -53,25 +54,139 @@
 
 @media (min-width: 1200px) {
     body{
-        width: 76%;
+        width: 100%;
     }
 
-    .position, .explanation, .operation, .resturants,
-    .presentation, .dish, .btn__menu{
-        padding-left: 25%;
-        padding-right: 25%;
+    .initial__animation{
+        width: 20rem;
+        height: 20rem;
     }
 
-    .resturants__card p{
-        left: 75%;
+    .operation{
+        padding: 2rem 5%;
+        margin: 0;
+        .title{
+            text-align: center;
+        }
+
+        &_card{
+            width: 60rem;
+        }
+
+        &__card--container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
-}
 
-@media (min-width: 1200px) {
+    .resturants{
+        padding: 2rem 2%;
 
-    .resturants__card {
-        p{
-            left: 80%;
+        .title{
+            text-align: center;
+        }
+
+        &__card--container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__card{
+            width: 25rem;
+            img{
+                height: 10rem;
+            }
+
+            p{
+                top: -9rem;
+                left: 60%;
+            }
+        }
+    }
+
+    .btn{
+        width: 40%;
+    }
+
+
+    .presentation{
+        padding: 3rem 40rem 3rem 40rem;
+        justify-content: space-between;
+    }
+
+    .dish__container{
+        display: flex;
+        justify-content: space-around;
+        margin: 2rem 10%;
+    }
+
+    .dish{
+        padding: 2rem 1rem;
+        width: 33%;
+        display: inline-block;
+
+    }
+
+
+    footer{
+        padding: 2rem 10%;
+        text-align: center;
+        &__composed--container{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .composed{
+            display: inline;
+            padding-right: 5rem;
         }
     }
 }
+
+@media (min-width: 1350px) {
+
+    body{
+        width: 85%;    
+    }
+
+    .resturants{
+
+        &__card{
+            width: 26rem;
+            p{
+                left: 65%;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1500px) {
+
+    body{
+        width: 85%;    
+    }
+
+    .operation{
+        padding: 2rem 15%;
+    }
+
+    .resturants{
+
+        &__card{
+            width: 30rem;
+            p{
+                left: 70%;
+            }
+        }
+    }
+
+    .presentation{
+        padding: 3rem 50rem 3rem 50rem;
+        justify-content: space-between;
+    }
+}
+
+
